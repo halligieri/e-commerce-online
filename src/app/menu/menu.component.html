@@ -1,0 +1,23 @@
+
+<header>
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+
+
+	  	</div>
+		<div class="container-fluid">
+			<ul class="nav navbar-nav" *ngIf="isLogout()">
+			  <li><a [routerLink]="['singup']">Cerrar Sesion</a></li>
+				<li><a [routerLink]="['singin']">Iniciar Sesion</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right" *ngIf="isAuth()">
+				<li><a [routerLink]="['itemcar']" class="glyphicon glyphicon-shopping-cart"><span class="badge">{{contador}}</span></a></li>
+
+				<li><button class="glyphicon glyphicon-shopping-cart btn" (click)="onShowCar()"><span class="badge">{{contador}}</span>Carrito de Compras</button></li>
+
+				<li><button ><a class="glyphicon glyphicon-log-out" href="#">Cerrar Sesion</a></button></li>
+			</ul>
+		</div>
+	</nav>
+</header>
